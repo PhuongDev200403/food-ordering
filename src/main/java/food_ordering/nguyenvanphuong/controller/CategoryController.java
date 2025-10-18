@@ -24,7 +24,7 @@ public class CategoryController {
 
     //Tạo danh mục mới cho nhà hàng bởi admin
     @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/admin/category")
+    @PostMapping("/admin/categories")
     public ResponseEntity<Category> createCategory(@RequestBody CategoryCreationResquest request
                                                    //@RequestHeader("Authorization") String token
     ) throws Exception {
@@ -34,7 +34,7 @@ public class CategoryController {
         return new ResponseEntity<>(category, HttpStatus.CREATED);
     }
 
-    @GetMapping("/category/restaurant/{id}")
+    @GetMapping("/categories/restaurant/{id}")
     public ResponseEntity<List<Category>> getRestaurantCategory(
             @PathVariable Long id,
             @RequestHeader("Authorization") String token
@@ -45,14 +45,14 @@ public class CategoryController {
     }
 
     //Lấy danh sách tất cả các nhà hàng bởi admin
-    @PreAuthorize("hasRole('ADMIN')")
-    @GetMapping("/admin/categories")
+    //@PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/categories")
     public ResponseEntity<List<Category>> getAllCate() throws Exception {
         return new ResponseEntity<>(categoryService.findAllCategory(), HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/admin/category/{id}")
+    //@PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping("/admin/categories/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id) throws Exception {
         categoryService.deleteCategoryById(id);
         return new ResponseEntity<>("Xóa thành công", HttpStatus.OK);
