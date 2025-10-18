@@ -28,6 +28,7 @@ phuongnguyen20403@gmail.com
   + Thêm sản phẩm vào giỏ hàng, cập nhật số lượng trong giỏ hàng, clear giỏ hàng, Xem giỏ hàng của bản thân
   + Xem chi tiết sản phẩm,tìm kiếm sản phẩm, Xem món ăn thao nhà hàng
   + Đặt hàng, xem lịch sử đặt hàng
+  + Xem danh sách nhà hàng, xem chi tiết nhà hàng
   + Xem danh mục món ăn, tìm kiếm danh mục
 
 ## Kiến thức và công nghệ sử dụng 
