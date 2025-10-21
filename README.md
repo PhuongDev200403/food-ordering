@@ -135,4 +135,11 @@ GET /api/users
     }
 ]
 ```
+## Deployement
+**Local**
+```bash
+mvn clean package
+java -jar target/nguyenvanphuong-0.0.1-SNAPSHOT.jar
+```
+
 
